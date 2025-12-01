@@ -6,16 +6,15 @@ interface PageRouteProps {
 }
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter(); // ← هذا السطر يجب أن يكون موجود
 
   // Imeperative routing with useRouter
   const routeToNextPage  = ({ pageRoute }: PageRouteProps) => {
-    router.push(pageRoute, undefined, { shallow: false})
+    router.push(pageRoute, undefined, { shallow: false })
   }
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center text-center">
-      {/* Welcome Message */}
       <h1 className="text-4xl font-bold text-gray-800 mb-4">
         Welcome to Splash App!
       </h1>
@@ -24,7 +23,6 @@ export default function Home() {
         navigating to our features below.
       </p>
 
-      {/* Navigation Options */}
       <div className="flex gap-6">
         <Button
           action={() => routeToNextPage({ pageRoute: '/generate-text-ai' })}
