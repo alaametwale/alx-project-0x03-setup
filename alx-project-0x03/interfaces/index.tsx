@@ -1,5 +1,4 @@
-// interfaces/index.ts
-
+// interfaces/index.tsx
 export interface ButtonProps {
   buttonLabel: string;
   buttonSize?: string;
